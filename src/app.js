@@ -14,4 +14,13 @@ app.use(express.urlencoded({extended: true, limit: "16kb"}))
 app.use(express.static("public"))
 app.use(cookieParser())
 
+// routes
+import userRouter from './routes/user.routes.js'
+
+// routes declaration
+app.use("/api/v1/users",userRouter)
+
+// because user ata is at api hence we use api as route
+// http://localhost:8000/users/register
+
 export { app }
