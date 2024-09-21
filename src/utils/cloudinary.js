@@ -28,8 +28,5 @@ const uploadOnCloudinary = async (localFilePath) => {
     }
 }
 
-cloudinary.v2.uploader.upload("https://res.cloudinary.com/demo/image/upload/getting-started/shoes.jpg"),
-{public_id: "olympic_flag"},
-function(arror,result){console.log(result);}
 
 export {uploadOnCloudinary}
